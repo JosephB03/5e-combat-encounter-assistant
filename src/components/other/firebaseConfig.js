@@ -3,7 +3,7 @@ import { getDownloadURL, getStorage } from 'firebase/storage';
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDf7zmMzyAB-suvlQvh_LVZAVRzfScW7FA",
+    apiKey: "API_KEY_HERE",
 
     authDomain: "encounter-assistant-46d1e.firebaseapp.com",
   
