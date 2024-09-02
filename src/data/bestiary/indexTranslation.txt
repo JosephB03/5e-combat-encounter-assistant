@@ -1,0 +1,80 @@
+{
+	"AATM": "bestiary-aatm.json",                   Adventure Atlas: The Mortuary 
+	"AI": "bestiary-ai.json,                        Acquisition's Incorporated
+	"AitFR-ISF": "bestiary-aitfr-isf.json",         Adventures in the Forgotten Realms: In Scarlet Flames
+	"AitFR-THP": "bestiary-aitfr-thp.json",        	Adventures in the Forgotten Realms: The Hidden Page
+	"AitFR-DN": "bestiary-aitfr-dn.json",           Adventures in the Forgotten Realms: Deepest Night
+	"AitFR-FCD": "bestiary-aitfr-fcd.json",         Adventures in the Forgotten Realms: From Cyan Depths
+	"AWM": "bestiary-awm.json",                     Adventure with Muk
+	"BAM": "bestiary-bam.json",						Boo's Astral Menagerie
+	"BGDIA": "bestiary-bgdia.json",					Baldur's Gate Descent into Avernus
+	"BGG": "bestiary-bgg.json",                     Bigby Presents Glory of the Giants
+	"CM": "bestiary-cm.json",						Candlekeep Mysteries
+	"CoA": "bestiary-coa.json",						Chains of Asmodeus
+	"CoS": "bestiary-cos.json",                     Curse of Strahd
+	"CRCotN": "bestiary-crcotn.json",				Critical Role Call of the Netherdeep
+	"DC": "bestiary-dc.json",                       Divine Contention
+	"DIP": "bestiary-dip.json",                     Dragon of Icespire Peak
+	"DMG": "bestiary-dmg.json",                     Dungeon Master's Guide
+	"DoD": "bestiary-dod.json",                     Domain's of Delight
+	"DoSI": "bestiary-dosi.json",					Dragon of Stormwreak Isle
+	"DSotDQ": "bestiary-dsotdq.json",				Dragonlance Shadow of the Dragon Queen
+	"EGW": "bestiary-egw.json",						Explorer's Guide to Wildemount
+	"ERLW": "bestiary-erlw.json",                   Eberron Rising from the Last War
+	"ESK": "bestiary-esk.json",						Essentials Kit
+	"FTD": "bestiary-ftd.json",                     Fizban's Treasury of Dragons
+	"GGR": "bestiary-ggr.json",                     Guildmaster's Guide to Ravnica
+	"GoS": "bestiary-gos.json",                     Ghosts of Saltmarsh
+	"GotSF": "bestiary-gotsf.json",					Giants of the Star Forge
+	"HAT-TG": "bestiary-hat-tg.json",				Honor Among Thieves: Thieves' Gallery
+	"HftT": "bestiary-hftt.json",                   Hunt for the Thesselhydra
+	"HoL": "bestiary-hol.json",						The House of Lament
+	"HotDQ": "bestiary-hotdq.json",					Hoard of the Dragon Queen
+	"IDRotF": "bestiary-idrotf.json",				Icewind Dale Rime of the Frostmaiden
+	"IMR": "bestiary-imr.json",						Infernal Machine Rebuild
+	"JttRC": "bestiary-jttrc.json",					Journeys Through The Radiant Citadel
+	"KftGV": "bestiary-kftgv.json",					Keys from the Golden Vault
+	"KKW": "bestiary-kkw.json",						Krenko's Way
+	"LLK": "bestiary-llk.json",                     Lost Laboratory of Kwalish
+	"LMoP": "bestiary-lmop.json",                   Lost Mine of Phandelver
+	"LoX": "bestiary-lox.json",						Light of Xaryxis
+	"LR": "bestiary-lr.json",						Locathah Rising
+	"MaBJoV": "bestiary-mabjov.json",				Minsc and Boo's Journey of Villainy
+	"MCV1SC": "bestiary-mcv1sc.json",               Monstrous Compendium Vol 1: Spelljammer Creatures
+	"MCV2DC": "bestiary-mcv2dc.json",               Monstrous Compendium Vol 2: Dragonlance Creatures
+	"MCV3MC": "bestiary-mcv3mc.json",				Monstrous Compendium Vol 4: Minecraft Creatures
+	"MCV4EC": "bestiary-mcv4ec.json",               Monstrous Compendium Vol 4: Eldraine Creatures
+	"MisMV1": "bestiary-mismv1.json",               Misplaced Monsters Volume 1
+	"MFF": "bestiary-mff.json",                     Mordenkainen's Fiendish Folio
+	"MGELFT": "bestiary-mgelft.json",				Muk's Guide to Everything he Learned From Tasha
+	"MM": "bestiary-mm.json",                       Monster Manual
+	"MPMM": "bestiary-mpmm.json",                   Mordenkainen Presents Monsters of the Multiverse
+	"MPP": "bestiary-mpp.json",						Morte's Planar Parade
+	"MOT": "bestiary-mot.json",                     Mythic Odyssey of Theros
+	"MTF": "bestiary-mtf.json",                     Mordenkainen's Tome of Foes
+	"OotA": "bestiary-oota.json",                   Out of the Abyss
+	"OoW": "bestiary-oow.json",						The Orrery of the Wanderer				
+	"PaBTSO": "bestiary-pabtso.json",				Phandelver and Below The Shattered Obelisk
+	"PHB": "bestiary-phb.json",                     Player's Handbook
+	"PotA": "bestiary-pota.json",                   Princes of the Apocalypse
+	"RoT": "bestiary-rot.json",						Rise of Tiamat
+	"RtG": "bestiary-rtg.json",						Return to the Glory
+	"SADS": "bestiary-sads.json",					Sapphire Anniversary Dice Set
+	"SCC": "bestiary-scc.json",                     Strixhaven A Curriculum of Chaos
+	"SDW": "bestiary-sdw.json",                     Sleeping Dragon's Wake
+	"SKT": "bestiary-skt.json",                     Storm King's Thunder
+	"SLW": "bestiary-slw.json",                     Storm Lord's Wrath
+	"TCE": "bestiary-tce.json",                     Tasha's Cauldron of Everything
+	"TDCSR": "bestiary-tdcsr.json",					Tal'Dorei Campaign Setting Reborn
+	"TTP": "bestiary-ttp.json",                     The Tortle Package
+	"TftYP": "bestiary-tftyp.json",                 Tales from the Yawning Portal
+	"ToA": "bestiary-toa.json",                     Tomb of Annihilation
+	"ToFW": "bestiary-tofw.json",					Turn of Fortune's Wheel
+	"VD": "bestiary-vd.json",                       Vecna Dossier
+	"VGM": "bestiary-vgm.json",                     Volo's Guide to Monsters
+	"VRGR": "bestiary-vrgr.json",                   Van Richten's Guide to Ravenloft
+	"XGE": "bestiary-xge.json",                     Xanathar's Guide to Everything
+	"WBtW": "bestiary-wbtw.json",					Wild Beyond the Witchlight
+	"WDH": "bestiary-wdh.json",                     Waterdeep Dragon Heist
+	"WDMM": "bestiary-wdmm.json"                    Waterdeep Dungeon of the Mad Mage
+}

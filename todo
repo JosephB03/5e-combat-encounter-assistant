@@ -1,0 +1,19 @@
+# Todo List
+
+- Fix default props for all components
+- Implement more robust Sliding through the table
+- Implement multiple JSON files
+- Preview monsters on addition
+    > Would need to implement storage
+- Implement About page
+- Learn Tailwind CSS
+
+
+# Debugging
+> Not all URLs lead to the appropriate monster
+> Encounter is cleared when moving to /encounter, must figure out how to access it in /encounter and
+how to ensure it is not cleared
+
+# Misc
+> Deal with Alignment jank (has just been removed for now)
+> Can maybe edit Monsters.js to remove the Monsters state?
