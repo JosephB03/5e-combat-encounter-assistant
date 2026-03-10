@@ -1,25 +1,100 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-dnd-dark text-dnd-text font-body;
+  }
 }
 
-/* Set a base font size and family */
-body {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+@layer components {
+  .btn-dnd-primary {
+    @apply bg-dnd-red hover:bg-dnd-red-light text-white font-display text-sm font-semibold px-4 py-2 rounded transition-colors duration-150 cursor-pointer border-none;
+  }
+
+  .btn-dnd-secondary {
+    @apply bg-transparent border border-dnd-gold text-dnd-gold hover:bg-dnd-gold hover:text-dnd-darker font-display text-sm font-semibold px-4 py-2 rounded transition-colors duration-150 cursor-pointer;
+  }
+
+  .btn-dnd-sm {
+    @apply bg-dnd-red hover:bg-dnd-red-light text-white text-xs font-semibold px-2 py-1 rounded transition-colors duration-150 cursor-pointer border-none;
+  }
+
+  .btn-dnd-ghost {
+    @apply bg-transparent border border-dnd-red text-dnd-red hover:bg-dnd-red hover:text-white text-xs font-semibold px-2 py-1 rounded transition-colors duration-150 cursor-pointer;
+  }
+
+  .panel-dnd {
+    @apply bg-dnd-panel border border-dnd-gold/30 rounded-lg shadow-dnd;
+  }
+
+  .panel-parchment {
+    @apply bg-dnd-parchment text-dnd-brown border border-dnd-gold-dark/40 rounded-lg shadow-dnd;
+  }
+
+  .section-title {
+    @apply font-display text-dnd-gold font-semibold uppercase tracking-wider text-sm border-b border-dnd-gold/30 pb-2 mb-4;
+  }
+
+  .page-title {
+    @apply font-display text-dnd-gold font-bold text-2xl mb-4;
+  }
+
+  .input-dnd {
+    @apply bg-dnd-darker border border-dnd-gold/40 text-dnd-text rounded px-3 py-2 w-full focus:outline-none focus:border-dnd-gold placeholder-dnd-text/50 text-sm;
+  }
+
+  .table-dnd {
+    @apply w-full text-sm;
+  }
+
+  .table-dnd thead tr {
+    @apply bg-dnd-darker border-b border-dnd-gold/40;
+  }
+
+  .table-dnd thead th {
+    @apply font-display text-dnd-gold font-semibold text-xs uppercase tracking-wider px-3 py-2 text-left;
+  }
+
+  .table-dnd tbody tr {
+    @apply border-b border-dnd-gold/10 hover:bg-dnd-gold/5 transition-colors duration-100;
+  }
+
+  .table-dnd tbody tr:nth-child(odd) {
+    @apply bg-black/10;
+  }
+
+  .table-dnd tbody td {
+    @apply px-3 py-2 text-dnd-text;
+  }
+
+  .stat-block {
+    @apply panel-parchment p-4;
+  }
+
+  .stat-block h3 {
+    @apply font-display text-dnd-brown font-bold text-xl border-b-2 border-dnd-red pb-2 mb-3;
+  }
+
+  .stat-row {
+    @apply flex justify-between text-xs font-semibold uppercase tracking-wider text-dnd-brown/70 border-b border-dnd-parchment-dark pb-1 mb-2;
+  }
+
+  .ability-score {
+    @apply text-center;
+  }
+
+  .ability-score .score {
+    @apply font-bold text-lg text-dnd-brown;
+  }
+
+  .ability-score .modifier {
+    @apply text-dnd-red text-sm font-semibold;
+  }
 }
-
-/* Add responsive styles */
-@media screen and (max-width: 768px) {
-  /* Styles for screens smaller than 768px */
-}
-
-@media screen and (min-width: 768px) {
-  /* Styles for screens larger than or equal to 768px */
-}
-
-/* Add more media queries as needed */
-
-/* Add your custom styles below this line */
