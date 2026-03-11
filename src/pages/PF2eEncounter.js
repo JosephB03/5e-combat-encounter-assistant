@@ -43,19 +43,59 @@ function actionIcon(cost) {
   return ACTION_ICONS[cost] || (cost ? String(cost) : "");
 }
 
+// ─── Elite / Weak variant helpers ─────────────────────────────────────────────
+
+function hpAdjust(baseLevel, isElite) {
+  const abs = baseLevel <= 1 ? 10 : baseLevel <= 4 ? 15 : baseLevel <= 19 ? 20 : 30;
+  return isElite ? abs : -abs;
+}
+
+function applyVariant(creature, variant) {
+  if (!variant || variant === "normal") return creature;
+  const elite = variant === "elite";
+  const mod = elite ? 2 : -2;
+  return {
+    ...creature,
+    _variant: variant,
+    level: creature.level + (elite ? 1 : -1),
+    ac: (creature.ac || 0) + mod,
+    perception: (creature.perception || 0) + mod,
+    hp: Math.max(1, (creature.hp || 0) + hpAdjust(creature.level, elite)),
+    saves: {
+      fort: (creature.saves?.fort || 0) + mod,
+      ref:  (creature.saves?.ref  || 0) + mod,
+      will: (creature.saves?.will || 0) + mod,
+    },
+    skills: Object.fromEntries(
+      Object.entries(creature.skills || {}).map(([k, v]) => [k, v + mod])
+    ),
+    actions: (creature.actions || []).map((a) =>
+      a.attack !== undefined ? { ...a, attack: a.attack + mod } : a
+    ),
+  };
+}
+
+const VARIANT_BADGE = {
+  elite: { label: "Elite",  cls: "bg-amber-700 text-white" },
+  weak:  { label: "Weak",   cls: "bg-blue-900  text-blue-200" },
+};
+
 // ─── Main component ───────────────────────────────────────────────────────────
 
-function PF2eEncounter({ encounter = [], defaultPartyLevel = 5 }) {
+function PF2eEncounter({ encounter = [], defaultPartyLevel = 5, variants = {} }) {
   const [partyCount, setPartyCount]   = useState(4);
   const [partyLevel, setPartyLevel]   = useState(defaultPartyLevel);
   const [playerView, setPlayerView]   = useState(false);
 
-  // Deduplicate
+  // Deduplicate and apply variants
   const counts = {};
   for (const c of encounter) {
     const key = `${c.name}_${c.source}`;
     if (counts[key]) counts[key].count++;
-    else counts[key] = { count: 1, creature: c };
+    else {
+      const variant = variants[key] || "normal";
+      counts[key] = { count: 1, creature: applyVariant(c, variant), baseKey: key };
+    }
   }
 
   // HP state: { [key]: number[] }
@@ -292,6 +332,11 @@ function PF2eCreatureCard({ creatureKey, creature, count, partyLevel, hpValues, 
         </div>
         <div className="flex items-center gap-2 shrink-0">
           {allDead && <span className="text-dnd-text/30 text-xs">Defeated</span>}
+          {creature._variant && VARIANT_BADGE[creature._variant] && (
+            <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${VARIANT_BADGE[creature._variant].cls}`}>
+              {VARIANT_BADGE[creature._variant].label}
+            </span>
+          )}
           {count > 1 && (
             <span className="bg-dnd-red text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
               ×{count}
@@ -554,7 +599,14 @@ function PF2ePlayerCard({ creature, count, hpValues, revealedFeatures }) {
       <div className="bg-dnd-red/80 px-4 py-3 border-b-2 border-dnd-red">
         <div className="flex items-center justify-between gap-2">
           <div>
-            <h3 className="font-display text-white font-bold text-xl leading-tight">{creature.name}</h3>
+            <div className="flex items-center gap-2 flex-wrap">
+              <h3 className="font-display text-white font-bold text-xl leading-tight">{creature.name}</h3>
+              {creature._variant && VARIANT_BADGE[creature._variant] && (
+                <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${VARIANT_BADGE[creature._variant].cls}`}>
+                  {VARIANT_BADGE[creature._variant].label}
+                </span>
+              )}
+            </div>
             <p className="text-white/70 text-xs capitalize">
               Level {creature.level} {creature.size} {(creature.traits || []).join(", ")}
             </p>

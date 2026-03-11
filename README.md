@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Encounter Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A multi-system combat encounter builder and tracker for tabletop RPG Game Masters, supporting **D&D 5th Edition** and **Pathfinder 2nd Edition**.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### D&D 5e Mode
 
-### `npm start`
+**Encounter Builder**
+- Browse monsters from the Monster Manual and 14 additional sourcebooks (Volo's Guide, Mordenkainen's, etc.)
+- Import homebrew monsters from any 5etools-format JSON file
+- Per-source toggle: enable/disable sourcebooks individually
+- Encounter XP budget using the official DMG multiplier table (×1 for 1 monster → ×4 for 15+), scaled for party size
+- Difficulty tiers: Easy / Medium / Hard / Deadly
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Encounter Runner**
+- Per-instance HP tracking with visual bars for every monster
+- GM feature reveal: individually toggle resistances, immunities, vulnerabilities, traits, actions, and reactions as known to players
+- Player view: parchment-style cards showing abstract HP conditions (Healthy / Wounded / Bloodied / Near Death / Defeated) and revealed abilities only
+- Monster images loaded from Firebase Storage where available
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pathfinder 2e Mode
 
-### `npm test`
+**Encounter Builder**
+- 32 creatures from **Monster Core** and **Monster Core 2** spanning levels −1 to 19
+- XP budget system: each creature costs XP based on its level relative to the party (same level = 40 XP, +4 levels = 160 XP)
+- Difficulty tiers: Low / Moderate / Severe / Extreme, scaled for party size
+- **Elite / Weak variant toggle** per creature: Elite raises level by 1 and all stats by 2, Weak lowers them; XP cost automatically adjusts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Encounter Runner**
+- Three-action economy display (◆ ◆◆ ◆◆◆ ↺ ◇) in stat blocks
+- AC, Fortitude / Reflex / Will saves in a 5-column stat row
+- Weaknesses with specific damage values (e.g. Fire 10)
+- Per-creature HP tracking, GM feature reveal, and parchment player view
+- Elite / Weak badges shown on all cards
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React 18** with Create React App
+- **React Router v6**
+- **Tailwind CSS v3** with a custom D&D Beyond-inspired color palette
+- **Firebase Storage** for monster images
+- Custom D&D Beyond-style component library (`panel-dnd`, `panel-parchment`, `btn-dnd-*`, etc.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data Sources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**D&D 5e** monster data is sourced from [5etools](https://5e.tools/) (community-maintained reference). Dungeons & Dragons is a trademark of Wizards of the Coast LLC.
 
-### `npm run eject`
+**Pathfinder 2e** creature data is derived from *Monster Core* and *Monster Core 2*, published by Paizo Inc. Pathfinder is a trademark of Paizo Inc. Stats used under the ORC License / Community Use Policy.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This tool is unofficial and not affiliated with Wizards of the Coast or Paizo Inc.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```

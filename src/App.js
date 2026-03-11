@@ -22,6 +22,8 @@ function App() {
   // PF2e state
   const [encounterPF2e, setEncounterPF2e] = useState([]);
   const [pf2ePartyLevel, setPf2ePartyLevel] = useState(5);
+  // variants: { [creatureKey]: 'elite' | 'normal' | 'weak' }
+  const [pf2eVariants, setPf2eVariants] = useState({});
 
   return (
     <Router>
@@ -73,6 +75,8 @@ function App() {
                     setEncounter={setEncounterPF2e}
                     partyLevel={pf2ePartyLevel}
                     setPartyLevel={setPf2ePartyLevel}
+                    variants={pf2eVariants}
+                    setVariants={setPf2eVariants}
                   />
                 }
               />
@@ -85,6 +89,8 @@ function App() {
                     setEncounter={setEncounterPF2e}
                     partyLevel={pf2ePartyLevel}
                     setPartyLevel={setPf2ePartyLevel}
+                    variants={pf2eVariants}
+                    setVariants={setPf2eVariants}
                   />
                 }
               />
@@ -94,6 +100,7 @@ function App() {
                   <PF2eEncounter
                     encounter={encounterPF2e}
                     defaultPartyLevel={pf2ePartyLevel}
+                    variants={pf2eVariants}
                   />
                 }
               />
@@ -106,6 +113,8 @@ function App() {
                     setEncounter={setEncounterPF2e}
                     partyLevel={pf2ePartyLevel}
                     setPartyLevel={setPf2ePartyLevel}
+                    variants={pf2eVariants}
+                    setVariants={setPf2eVariants}
                   />
                 }
               />

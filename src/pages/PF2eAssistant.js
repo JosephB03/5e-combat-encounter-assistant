@@ -4,7 +4,7 @@ import PF2eMonsters from "../components/PF2eMonsters";
 import PF2eCurrentEncounter from "../components/PF2eCurrentEncounter";
 import PF2eMonsterDisplay from "../components/ui/PF2eMonsterDisplay";
 
-function PF2eAssistant({ encounter, setEncounter, partyLevel, setPartyLevel }) {
+function PF2eAssistant({ encounter, setEncounter, partyLevel, setPartyLevel, variants, setVariants }) {
   const [preview, setPreview] = useState(null);
 
   return (
@@ -42,6 +42,8 @@ function PF2eAssistant({ encounter, setEncounter, partyLevel, setPartyLevel }) {
           encounter={encounter}
           setEncounter={setEncounter}
           partyLevel={partyLevel}
+          variants={variants}
+          setVariants={setVariants}
         />
 
         <div>
