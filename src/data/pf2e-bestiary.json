@@ -1,0 +1,747 @@
+{
+  "creatures": [
+    {
+      "name": "Giant Rat",
+      "level": -1,
+      "rarity": "Common",
+      "size": "Small",
+      "traits": ["Animal"],
+      "source": "Bestiary",
+      "perception": 5,
+      "senses": ["low-light vision", "scent 30 ft."],
+      "languages": [],
+      "skills": { "Acrobatics": 7, "Athletics": 2, "Stealth": 7 },
+      "str": 2, "dex": 4, "con": 1, "int": -4, "wis": 2, "cha": -2,
+      "items": [],
+      "ac": 14,
+      "saves": { "fort": 4, "ref": 7, "will": 3 },
+      "hp": 8,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 30, "swim": 10 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": ["Finesse"], "attack": 7, "damage": "1d6-1", "damageType": "piercing", "note": "plus filth fever" }
+      ],
+      "abilities": [
+        { "name": "Filth Fever", "description": "Saves DC 14 Fortitude. The rat's bite exposes the target to this disease." }
+      ]
+    },
+    {
+      "name": "Skeleton Guard",
+      "level": -1,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Mindless", "Skeleton", "Undead"],
+      "source": "Bestiary",
+      "perception": 2,
+      "senses": ["darkvision"],
+      "languages": [],
+      "skills": { "Acrobatics": 6, "Athletics": 2 },
+      "str": 2, "dex": 4, "con": 0, "int": -5, "wis": 0, "cha": 0,
+      "items": ["Scimitar", "Shortbow (20 arrows)", "Shield"],
+      "ac": 16,
+      "saves": { "fort": 3, "ref": 6, "will": 2 },
+      "hp": 4,
+      "immunities": ["death effects", "disease", "mental", "paralysis", "poison", "unconscious"],
+      "resistances": [
+        { "type": "Cold", "value": 5 },
+        { "type": "Electricity", "value": 5 },
+        { "type": "Fire", "value": 5 },
+        { "type": "Piercing", "value": 5 },
+        { "type": "Slashing", "value": 5 }
+      ],
+      "weaknesses": [
+        { "type": "Bludgeoning", "value": 5 },
+        { "type": "Positive", "value": 5 }
+      ],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Scimitar", "cost": 1, "type": "Strike", "traits": ["Forceful", "Sweep"], "attack": 6, "damage": "1d6+2", "damageType": "slashing" },
+        { "name": "Shortbow", "cost": 1, "type": "Strike", "traits": ["Deadly d10"], "attack": 5, "damage": "1d6", "damageType": "piercing", "range": "60 ft." },
+        { "name": "Shield Block", "cost": "reaction", "type": "Ability", "traits": [], "description": "Raise a shield to reduce incoming damage." }
+      ],
+      "abilities": []
+    },
+    {
+      "name": "Goblin Warrior",
+      "level": 0,
+      "rarity": "Common",
+      "size": "Small",
+      "traits": ["Goblin", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 3,
+      "senses": ["darkvision"],
+      "languages": ["Goblin"],
+      "skills": { "Acrobatics": 5, "Stealth": 5 },
+      "str": 0, "dex": 3, "con": 1, "int": -1, "wis": 0, "cha": 1,
+      "items": ["Dogslicer", "Shortbow (20 arrows)", "Leather Armor"],
+      "ac": 15,
+      "saves": { "fort": 5, "ref": 7, "will": 3 },
+      "hp": 6,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Dogslicer", "cost": 1, "type": "Strike", "traits": ["Agile", "Backstabber", "Finesse"], "attack": 6, "damage": "1d6", "damageType": "slashing" },
+        { "name": "Shortbow", "cost": 1, "type": "Strike", "traits": ["Deadly d10"], "attack": 5, "damage": "1d6", "damageType": "piercing", "range": "60 ft." }
+      ],
+      "abilities": [
+        { "name": "Goblin Scuttle", "cost": "reaction", "description": "Trigger: An ally ends a move action adjacent to the goblin. Effect: The goblin Steps." }
+      ]
+    },
+    {
+      "name": "Zombie Shambler",
+      "level": 1,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Mindless", "Undead", "Zombie"],
+      "source": "Bestiary",
+      "perception": 4,
+      "senses": ["darkvision"],
+      "languages": [],
+      "skills": { "Athletics": 7 },
+      "str": 4, "dex": -2, "con": 2, "int": -5, "wis": 0, "cha": -2,
+      "items": [],
+      "ac": 13,
+      "saves": { "fort": 7, "ref": 1, "will": 4 },
+      "hp": 20,
+      "immunities": ["death effects", "disease", "mental", "paralysis", "poison", "unconscious"],
+      "resistances": [],
+      "weaknesses": [
+        { "type": "Positive", "value": 5 },
+        { "type": "Slashing", "value": 5 }
+      ],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 7, "damage": "1d8+4", "damageType": "piercing" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 7, "damage": "1d6+4", "damageType": "slashing" }
+      ],
+      "abilities": [
+        { "name": "Slow", "description": "A zombie is permanently slowed 1 and can't use reactions." },
+        { "name": "Undead Hunger", "description": "A zombie can eat the flesh of living or recently dead creatures." }
+      ]
+    },
+    {
+      "name": "Wolf",
+      "level": 1,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Animal"],
+      "source": "Bestiary",
+      "perception": 7,
+      "senses": ["low-light vision", "scent 30 ft."],
+      "languages": [],
+      "skills": { "Acrobatics": 6, "Athletics": 6, "Stealth": 6, "Survival": 7 },
+      "str": 3, "dex": 2, "con": 2, "int": -4, "wis": 2, "cha": -1,
+      "items": [],
+      "ac": 15,
+      "saves": { "fort": 6, "ref": 4, "will": 4 },
+      "hp": 20,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 35 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": ["Trip"], "attack": 8, "damage": "1d6+3", "damageType": "piercing" }
+      ],
+      "abilities": [
+        { "name": "Pack Attack", "description": "The wolf deals 1d4 extra damage to any creature that is within reach of at least one of the wolf's allies." }
+      ]
+    },
+    {
+      "name": "Kobold Scout",
+      "level": 1,
+      "rarity": "Common",
+      "size": "Small",
+      "traits": ["Humanoid", "Kobold"],
+      "source": "Bestiary",
+      "perception": 7,
+      "senses": ["darkvision"],
+      "languages": ["Common", "Draconic"],
+      "skills": { "Acrobatics": 7, "Crafting": 5, "Nature": 5, "Stealth": 7 },
+      "str": 0, "dex": 4, "con": 0, "int": 1, "wis": 2, "cha": 0,
+      "items": ["Shortsword", "Shortbow (20 arrows)", "Studded Leather Armor"],
+      "ac": 16,
+      "saves": { "fort": 3, "ref": 7, "will": 5 },
+      "hp": 15,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Shortsword", "cost": 1, "type": "Strike", "traits": ["Agile", "Finesse", "Versatile S"], "attack": 7, "damage": "1d6", "damageType": "piercing" },
+        { "name": "Shortbow", "cost": 1, "type": "Strike", "traits": ["Deadly d10"], "attack": 7, "damage": "1d6", "damageType": "piercing", "range": "60 ft." }
+      ],
+      "abilities": [
+        { "name": "Hurried Retreat", "cost": "reaction", "description": "Trigger: The kobold is adjacent to an enemy. Effect: The kobold Steps and gains +2 circumstance bonus to AC until the start of its next turn, provided it ended its Step in a space without an enemy." }
+      ]
+    },
+    {
+      "name": "Guard",
+      "level": 1,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Human", "Humanoid"],
+      "source": "Gamemastery Guide",
+      "perception": 5,
+      "senses": [],
+      "languages": ["Common"],
+      "skills": { "Athletics": 5, "Intimidation": 3, "Society": 3 },
+      "str": 3, "dex": 0, "con": 2, "int": 0, "wis": 1, "cha": -1,
+      "items": ["Longsword", "Crossbow (20 bolts)", "Scale Mail", "Shield"],
+      "ac": 16,
+      "saves": { "fort": 7, "ref": 3, "will": 4 },
+      "hp": 20,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 20 },
+      "actions": [
+        { "name": "Longsword", "cost": 1, "type": "Strike", "traits": ["Versatile P"], "attack": 8, "damage": "1d8+3", "damageType": "slashing" },
+        { "name": "Crossbow", "cost": 1, "type": "Strike", "traits": [], "attack": 5, "damage": "1d8", "damageType": "piercing", "range": "120 ft." },
+        { "name": "Shield Block", "cost": "reaction", "type": "Ability", "description": "Reduce damage by shield hardness." }
+      ],
+      "abilities": [
+        { "name": "Raise Shield", "cost": 1, "description": "Gain a +2 circumstance bonus to AC until the start of next turn." }
+      ]
+    },
+    {
+      "name": "Ghoul",
+      "level": 2,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Ghoul", "Undead"],
+      "source": "Bestiary",
+      "perception": 7,
+      "senses": ["darkvision"],
+      "languages": ["Common", "Necril"],
+      "skills": { "Acrobatics": 7, "Athletics": 5, "Deception": 6, "Stealth": 7 },
+      "str": 1, "dex": 4, "con": 0, "int": 0, "wis": 2, "cha": -1,
+      "items": [],
+      "ac": 17,
+      "saves": { "fort": 7, "ref": 9, "will": 6 },
+      "hp": 30,
+      "immunities": ["death effects", "disease", "paralysis", "poison", "unconscious"],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 30 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 10, "damage": "1d6+1", "damageType": "piercing", "note": "plus ghoul fever and paralysis" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 10, "damage": "1d4+1", "damageType": "slashing", "note": "plus paralysis" }
+      ],
+      "abilities": [
+        { "name": "Ghoul Fever", "description": "Saving throw DC 16 Fortitude. On a failed save the victim is Sickened 1 and loses the natural Recover from disease step." },
+        { "name": "Paralysis", "description": "Any living creature hit must succeed at a DC 16 Fortitude save or become Paralyzed. The creature can attempt a new save at the end of each of its turns." }
+      ]
+    },
+    {
+      "name": "Giant Snake",
+      "level": 2,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Animal"],
+      "source": "Bestiary",
+      "perception": 7,
+      "senses": ["low-light vision", "scent 30 ft."],
+      "languages": [],
+      "skills": { "Acrobatics": 5, "Athletics": 9, "Stealth": 5 },
+      "str": 5, "dex": 1, "con": 2, "int": -4, "wis": 1, "cha": -2,
+      "items": [],
+      "ac": 17,
+      "saves": { "fort": 9, "ref": 5, "will": 5 },
+      "hp": 30,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 20, "climb": 20, "swim": 20 },
+      "actions": [
+        { "name": "Fangs", "cost": 1, "type": "Strike", "traits": [], "attack": 10, "damage": "2d8+5", "damageType": "piercing", "note": "plus snake venom" },
+        { "name": "Constrict", "cost": 1, "type": "Ability", "description": "DC 19 Fortitude. Deals 1d8+5 bludgeoning damage to a grabbed target." }
+      ],
+      "abilities": [
+        { "name": "Snake Venom", "description": "Saving throw DC 16 Fortitude. Stages: Enfeebled 1 (1 round); Enfeebled 2 (1 round); Enfeebled 3 (1 round); Recovered." }
+      ]
+    },
+    {
+      "name": "Gnoll Warrior",
+      "level": 2,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Gnoll", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 7,
+      "senses": ["darkvision"],
+      "languages": ["Gnoll"],
+      "skills": { "Athletics": 8, "Intimidation": 6, "Stealth": 6, "Survival": 7 },
+      "str": 4, "dex": 2, "con": 2, "int": -1, "wis": 1, "cha": 0,
+      "items": ["Spear", "Shortbow (20 arrows)", "Hide Armor"],
+      "ac": 17,
+      "saves": { "fort": 8, "ref": 6, "will": 5 },
+      "hp": 30,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 9, "damage": "1d6+4", "damageType": "piercing" },
+        { "name": "Spear", "cost": 1, "type": "Strike", "traits": ["Thrown 20 ft."], "attack": 9, "damage": "1d6+4", "damageType": "piercing" },
+        { "name": "Shortbow", "cost": 1, "type": "Strike", "traits": ["Deadly d10"], "attack": 7, "damage": "1d6", "damageType": "piercing", "range": "60 ft." }
+      ],
+      "abilities": [
+        { "name": "Pack Attack", "description": "A gnoll deals 1d4 extra damage to any creature within reach of at least one of the gnoll's allies." }
+      ]
+    },
+    {
+      "name": "Harpy",
+      "level": 3,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Humanoid"],
+      "source": "Bestiary",
+      "perception": 8,
+      "senses": ["low-light vision"],
+      "languages": ["Common"],
+      "skills": { "Acrobatics": 9, "Deception": 8, "Diplomacy": 8, "Stealth": 9 },
+      "str": 2, "dex": 4, "con": 1, "int": -1, "wis": 1, "cha": 3,
+      "items": ["Club"],
+      "ac": 19,
+      "saves": { "fort": 7, "ref": 9, "will": 6 },
+      "hp": 45,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 20, "fly": 60 },
+      "actions": [
+        { "name": "Talon", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 10, "damage": "1d8+4", "damageType": "slashing" },
+        { "name": "Club", "cost": 1, "type": "Strike", "traits": ["Thrown 10 ft."], "attack": 9, "damage": "1d6+4", "damageType": "bludgeoning" },
+        { "name": "Captivating Song", "cost": 2, "type": "Ability", "description": "Aura 300 ft. Creatures in the aura must succeed at a DC 18 Will save or be fascinated and compelled to use their moves to get closer each round." }
+      ],
+      "abilities": []
+    },
+    {
+      "name": "Bugbear Thug",
+      "level": 3,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Goblin", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 8,
+      "senses": ["darkvision", "scent 30 ft."],
+      "languages": ["Common", "Goblin"],
+      "skills": { "Athletics": 10, "Intimidation": 7, "Stealth": 7 },
+      "str": 5, "dex": 2, "con": 3, "int": -1, "wis": 0, "cha": -1,
+      "items": ["Morningstar", "Javelin ×2", "Hide Armor"],
+      "ac": 18,
+      "saves": { "fort": 10, "ref": 7, "will": 5 },
+      "hp": 55,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Morningstar", "cost": 1, "type": "Strike", "traits": ["Versatile B"], "attack": 10, "damage": "1d6+5", "damageType": "piercing" },
+        { "name": "Javelin", "cost": 1, "type": "Strike", "traits": ["Thrown 30 ft."], "attack": 8, "damage": "1d6+5", "damageType": "piercing" }
+      ],
+      "abilities": [
+        { "name": "Surprise Attack", "description": "On the first round of combat, creatures that haven't acted are flat-footed to the bugbear." }
+      ]
+    },
+    {
+      "name": "Minotaur",
+      "level": 4,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Beast", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 9,
+      "senses": ["darkvision", "scent 30 ft."],
+      "languages": ["Jotun"],
+      "skills": { "Athletics": 12, "Intimidation": 8, "Survival": 9 },
+      "str": 5, "dex": 0, "con": 4, "int": -2, "wis": 1, "cha": 0,
+      "items": ["Greatclub", "Hide Armor"],
+      "ac": 21,
+      "saves": { "fort": 13, "ref": 6, "will": 9 },
+      "hp": 70,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Greatclub", "cost": 1, "type": "Strike", "traits": ["Backswing", "Shove"], "attack": 13, "damage": "2d10+5", "damageType": "bludgeoning" },
+        { "name": "Gore", "cost": 1, "type": "Strike", "traits": [], "attack": 13, "damage": "2d8+5", "damageType": "piercing" },
+        { "name": "Charge", "cost": 2, "type": "Ability", "description": "The minotaur Strides twice and then makes a Gore Strike. If it moved at least 20 ft., it deals an extra 2d6 damage on a hit and can attempt to Trip the target as a free action." }
+      ],
+      "abilities": [
+        { "name": "Natural Explorer", "description": "A minotaur is never flat-footed in underground environments and doesn't need to Seek in order to gain information from Exploration." }
+      ]
+    },
+    {
+      "name": "Werewolf",
+      "level": 4,
+      "rarity": "Common",
+      "size": "Medium",
+      "traits": ["Beast", "Human", "Humanoid", "Werecreature"],
+      "source": "Bestiary",
+      "perception": 11,
+      "senses": ["low-light vision", "scent 30 ft."],
+      "languages": ["Common"],
+      "skills": { "Acrobatics": 8, "Athletics": 11, "Intimidation": 8, "Survival": 11 },
+      "str": 5, "dex": 2, "con": 3, "int": -1, "wis": 3, "cha": 0,
+      "items": [],
+      "ac": 21,
+      "saves": { "fort": 13, "ref": 10, "will": 11 },
+      "hp": 70,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [{ "type": "Silver", "value": 5 }],
+      "speed": { "walk": 35 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 13, "damage": "2d8+5", "damageType": "piercing", "note": "plus curse of the werecreature" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 13, "damage": "1d10+5", "damageType": "slashing" }
+      ],
+      "abilities": [
+        { "name": "Curse of the Werecreature", "description": "A creature bitten must succeed at a DC 22 Fortitude save or be infected with lycanthropy." },
+        { "name": "Moon Frenzy", "description": "Under a full moon the werewolf gains +1 status bonus to attacks and damage, and its weakness to silver increases to 10." }
+      ]
+    },
+    {
+      "name": "Troll",
+      "level": 5,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Giant", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 10,
+      "senses": ["darkvision"],
+      "languages": ["Jotun"],
+      "skills": { "Athletics": 15, "Intimidation": 11 },
+      "str": 6, "dex": 0, "con": 6, "int": -2, "wis": 0, "cha": -2,
+      "items": [],
+      "ac": 17,
+      "saves": { "fort": 16, "ref": 9, "will": 9 },
+      "hp": 90,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [
+        { "type": "Acid", "value": 10 },
+        { "type": "Fire", "value": 10 }
+      ],
+      "speed": { "walk": 30 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 14, "damage": "1d10+6", "damageType": "piercing" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 14, "damage": "1d8+6", "damageType": "slashing" },
+        { "name": "Rend", "cost": 1, "type": "Ability", "description": "A troll that hits with two consecutive Claw attacks in a single round tears the flesh for an extra 1d8+6 slashing damage." }
+      ],
+      "abilities": [
+        { "name": "Regeneration 15", "description": "The troll regains 15 HP at the start of each of its turns. If it takes acid or fire damage, this is deactivated until the start of its next turn. A troll reduced to 0 HP dies only if it starts its turn at 0 HP with regeneration deactivated." }
+      ]
+    },
+    {
+      "name": "Cyclops",
+      "level": 5,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Giant", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 10,
+      "senses": ["low-light vision"],
+      "languages": ["Cyclops", "Jotun"],
+      "skills": { "Athletics": 15, "Intimidation": 11, "Survival": 10 },
+      "str": 6, "dex": 0, "con": 4, "int": -2, "wis": 1, "cha": -1,
+      "items": ["Greatclub", "Throwing Rock ×6"],
+      "ac": 21,
+      "saves": { "fort": 14, "ref": 8, "will": 10 },
+      "hp": 82,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25 },
+      "actions": [
+        { "name": "Greatclub", "cost": 1, "type": "Strike", "traits": ["Backswing", "Shove"], "attack": 15, "damage": "2d10+6", "damageType": "bludgeoning" },
+        { "name": "Rock", "cost": 1, "type": "Strike", "traits": ["Brutal", "Thrown 120 ft."], "attack": 12, "damage": "2d6+6", "damageType": "bludgeoning" }
+      ],
+      "abilities": [
+        { "name": "Catch Rock", "cost": "reaction", "description": "A cyclops can catch a thrown rock as a reaction, reducing the damage by 2d6+4." },
+        { "name": "Visions of the Past", "description": "Once per day, the cyclops can focus on a location to gain visions of the recent past; this functions as the retrocognition spell." }
+      ]
+    },
+    {
+      "name": "Manticore",
+      "level": 6,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Beast"],
+      "source": "Bestiary",
+      "perception": 13,
+      "senses": ["darkvision", "scent 30 ft."],
+      "languages": ["Common"],
+      "skills": { "Acrobatics": 13, "Athletics": 14, "Intimidation": 13, "Survival": 13 },
+      "str": 5, "dex": 3, "con": 3, "int": -1, "wis": 3, "cha": 1,
+      "items": [],
+      "ac": 23,
+      "saves": { "fort": 14, "ref": 15, "will": 12 },
+      "hp": 90,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 25, "fly": 40 },
+      "actions": [
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 17, "damage": "2d8+8", "damageType": "slashing" },
+        { "name": "Tail Spike", "cost": 1, "type": "Strike", "traits": [], "attack": 17, "damage": "1d10+8", "damageType": "piercing" },
+        { "name": "Spike Volley", "cost": 2, "type": "Ability", "description": "The manticore shoots 4 spikes in a 120 ft. line (attack +15, 1d10+8 piercing each). It can't use Spike Volley again for 1d4 rounds." }
+      ],
+      "abilities": [
+        { "name": "Spring Attack", "cost": "free", "description": "Trigger: The manticore kills a creature. Effect: The manticore Strides." }
+      ]
+    },
+    {
+      "name": "Lamia",
+      "level": 6,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Beast", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 11,
+      "senses": ["darkvision"],
+      "languages": ["Common", "Draconic"],
+      "skills": { "Deception": 15, "Diplomacy": 13, "Intimidation": 13, "Occultism": 13, "Stealth": 11 },
+      "str": 4, "dex": 3, "con": 2, "int": 3, "wis": 1, "cha": 5,
+      "items": ["Spear"],
+      "ac": 22,
+      "saves": { "fort": 11, "ref": 15, "will": 12 },
+      "hp": 95,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 30 },
+      "actions": [
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile", "Finesse"], "attack": 16, "damage": "2d8+7", "damageType": "slashing" },
+        { "name": "Spear", "cost": 1, "type": "Strike", "traits": ["Thrown 20 ft."], "attack": 15, "damage": "1d6+7", "damageType": "piercing" }
+      ],
+      "abilities": [
+        { "name": "Occult Spells", "description": "Spontaneous DC 22: 4th: Charm, Confusion, Suggestion; 3rd: Hypnotic Pattern, Paralyze; 2nd: Hideous Laughter, Mirror Image." },
+        { "name": "Wisdom Drain", "description": "When a lamia hits with its claw, the target must succeed at a DC 22 Will save or be stupefied 1 (stupefied 2 on a critical fail)." }
+      ]
+    },
+    {
+      "name": "Hill Giant",
+      "level": 7,
+      "rarity": "Common",
+      "size": "Large",
+      "traits": ["Giant", "Humanoid"],
+      "source": "Bestiary",
+      "perception": 11,
+      "senses": ["low-light vision"],
+      "languages": ["Jotun"],
+      "skills": { "Athletics": 18, "Intimidation": 13 },
+      "str": 7, "dex": -1, "con": 6, "int": -2, "wis": 0, "cha": -1,
+      "items": ["Greatclub", "Throwing Rock ×4"],
+      "ac": 22,
+      "saves": { "fort": 18, "ref": 11, "will": 13 },
+      "hp": 130,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 35 },
+      "actions": [
+        { "name": "Greatclub", "cost": 1, "type": "Strike", "traits": ["Backswing", "Sweep"], "attack": 18, "damage": "2d10+7", "damageType": "bludgeoning" },
+        { "name": "Rock", "cost": 1, "type": "Strike", "traits": ["Brutal", "Thrown 120 ft."], "attack": 16, "damage": "2d6+7", "damageType": "bludgeoning" }
+      ],
+      "abilities": [
+        { "name": "Catch Rock", "cost": "reaction", "description": "The hill giant can catch a thrown rock reducing damage by 2d6+5." },
+        { "name": "Throw Rock", "cost": 1, "description": "The giant picks up a rock or other sizable object and throws it, using the Rock strike." }
+      ]
+    },
+    {
+      "name": "Vampire Count",
+      "level": 7,
+      "rarity": "Uncommon",
+      "size": "Medium",
+      "traits": ["Undead", "Vampire"],
+      "source": "Bestiary",
+      "perception": 16,
+      "senses": ["darkvision"],
+      "languages": ["Common", "Necril", "Draconic", "Infernal"],
+      "skills": { "Athletics": 16, "Deception": 16, "Diplomacy": 16, "Intimidation": 16, "Society": 15, "Stealth": 15 },
+      "str": 5, "dex": 4, "con": 3, "int": 4, "wis": 3, "cha": 5,
+      "items": ["Elegant Clothing"],
+      "ac": 24,
+      "saves": { "fort": 14, "ref": 17, "will": 16 },
+      "hp": 130,
+      "immunities": ["death effects", "disease", "paralysis", "poison", "sleep", "unconscious"],
+      "resistances": [{ "type": "Physical", "value": 10, "note": "except magical and silver" }],
+      "weaknesses": [
+        { "type": "Vampire Weaknesses", "value": 0, "note": "garlic, running water, sunlight, staked through heart" },
+        { "type": "Wood", "value": 10 }
+      ],
+      "speed": { "walk": 25, "climb": 25 },
+      "actions": [
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile", "Finesse"], "attack": 17, "damage": "2d8+8", "damageType": "slashing" },
+        { "name": "Drink Blood", "cost": 1, "type": "Ability", "description": "Requirements: The vampire has a grabbed or unconscious creature within reach. Effect: DC 24 Fortitude save, 1d6 negative damage + 1d6 persistent negative on fail. Vampire regains HP equal to negative damage dealt." },
+        { "name": "Dominate", "cost": 2, "type": "Ability", "description": "The vampire uses a 4th-rank dominate spell (DC 25 Will)." }
+      ],
+      "abilities": [
+        { "name": "Fast Healing 20", "description": "The vampire regains 20 HP at the start of each turn. It can't Fast Heal when in direct sunlight." },
+        { "name": "Change Shape", "cost": 2, "description": "The vampire can transform into a bat, a cloud of mist, or a wolf (or back to its true form)." },
+        { "name": "Children of the Night", "cost": 2, "description": "The vampire calls 1d4 rat swarms, 3d4 bats, or 2d4 wolves. These creatures arrive in 2d4 rounds." }
+      ]
+    },
+    {
+      "name": "Medusa",
+      "level": 7,
+      "rarity": "Uncommon",
+      "size": "Medium",
+      "traits": ["Humanoid"],
+      "source": "Bestiary",
+      "perception": 16,
+      "senses": ["darkvision"],
+      "languages": ["Common"],
+      "skills": { "Deception": 18, "Diplomacy": 15, "Intimidation": 18, "Stealth": 16 },
+      "str": 2, "dex": 5, "con": 2, "int": 1, "wis": 3, "cha": 5,
+      "items": ["Shortbow (20 arrows)", "Studded Leather Armor"],
+      "ac": 25,
+      "saves": { "fort": 14, "ref": 17, "will": 15 },
+      "hp": 105,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 30 },
+      "actions": [
+        { "name": "Shortbow", "cost": 1, "type": "Strike", "traits": ["Deadly d10"], "attack": 18, "damage": "1d6+2", "damageType": "piercing", "range": "60 ft." },
+        { "name": "Snake Hair", "cost": 1, "type": "Strike", "traits": ["Agile", "Finesse", "Poison"], "attack": 18, "damage": "1d8+5", "damageType": "piercing", "note": "plus poisonous" }
+      ],
+      "abilities": [
+        { "name": "Petrifying Gaze", "description": "Aura 30 ft. A creature that begins its turn in the aura must succeed at a DC 24 Fortitude save. Fail: Dazzled for 1 round. Critical Fail: Slowed 1 for 1 minute. A creature Slowed 1 for 1 minute from this effect must save again at the start of each turn; on a critical failure, it is Petrified permanently." }
+      ]
+    },
+    {
+      "name": "Flesh Golem",
+      "level": 8,
+      "rarity": "Uncommon",
+      "size": "Large",
+      "traits": ["Construct", "Golem", "Mindless"],
+      "source": "Bestiary",
+      "perception": 11,
+      "senses": ["darkvision"],
+      "languages": [],
+      "skills": { "Athletics": 19 },
+      "str": 6, "dex": -1, "con": 4, "int": -5, "wis": -2, "cha": -5,
+      "items": [],
+      "ac": 23,
+      "saves": { "fort": 18, "ref": 13, "will": 14 },
+      "hp": 135,
+      "immunities": ["acid", "bleed", "death effects", "disease", "electricity", "fire", "mental", "poison", "sleep"],
+      "resistances": [{ "type": "Physical", "value": 5, "note": "except adamantine" }],
+      "weaknesses": [
+        { "type": "Cold", "value": 10 },
+        { "type": "Fire", "value": 10 }
+      ],
+      "speed": { "walk": 20 },
+      "actions": [
+        { "name": "Fist", "cost": 1, "type": "Strike", "traits": ["Magical"], "attack": 19, "damage": "2d10+9", "damageType": "bludgeoning" }
+      ],
+      "abilities": [
+        { "name": "Berserk Slam", "description": "When the flesh golem is below half its maximum HP, it goes berserk. Each round it makes a single Fist Strike as a free action against a random creature in reach." },
+        { "name": "Galvanize", "description": "Whenever the flesh golem is hit with electricity, it gains the quickened condition until the end of its next turn." },
+        { "name": "Golem Antimagic", "description": "Immune to spells and magical effects except those that deal acid, cold, or fire damage. A flesh golem critically fails all saving throws against electricity spells and is instead healed for 1d8 HP per die of electricity damage." }
+      ]
+    },
+    {
+      "name": "Sphinx",
+      "level": 10,
+      "rarity": "Uncommon",
+      "size": "Large",
+      "traits": ["Beast", "Sphinx"],
+      "source": "Bestiary",
+      "perception": 20,
+      "senses": ["darkvision", "true seeing"],
+      "languages": ["Common", "Draconic", "Sphinx"],
+      "skills": { "Arcana": 21, "Athletics": 19, "Occultism": 21, "Religion": 20, "Stealth": 16 },
+      "str": 6, "dex": 2, "con": 4, "int": 7, "wis": 5, "cha": 4,
+      "items": [],
+      "ac": 29,
+      "saves": { "fort": 20, "ref": 18, "will": 21 },
+      "hp": 175,
+      "immunities": [],
+      "resistances": [],
+      "weaknesses": [],
+      "speed": { "walk": 35, "fly": 40 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": [], "attack": 22, "damage": "2d10+9", "damageType": "piercing" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile"], "attack": 22, "damage": "2d8+9", "damageType": "slashing" },
+        { "name": "Pounce", "cost": 2, "type": "Ability", "description": "The sphinx Strides and makes a Strike at the end of that movement. If the sphinx began this action hidden, it remains hidden until after the Strike." }
+      ],
+      "abilities": [
+        { "name": "Innate Spells", "description": "Occult (DC 29): At will — true seeing; 3/day — clairvoyance, dispel magic, locate; 1/day — sending." },
+        { "name": "Prying Observation", "description": "A sphinx can ask a creature within 30 feet a question. If it doesn't answer truthfully, the sphinx learns that they lied (no save)." },
+        { "name": "Warding Riddle", "cost": 2, "description": "Pose a riddle; target must succeed at DC 30 Occultism/Arcana check or gain the confused condition for 1 minute." }
+      ]
+    },
+    {
+      "name": "Purple Worm",
+      "level": 13,
+      "rarity": "Rare",
+      "size": "Gargantuan",
+      "traits": ["Animal"],
+      "source": "Bestiary",
+      "perception": 20,
+      "senses": ["darkvision", "tremorsense 100 ft."],
+      "languages": [],
+      "skills": { "Athletics": 27, "Stealth": 17 },
+      "str": 9, "dex": -1, "con": 7, "int": -5, "wis": 1, "cha": -4,
+      "items": [],
+      "ac": 33,
+      "saves": { "fort": 26, "ref": 20, "will": 22 },
+      "hp": 260,
+      "immunities": ["poison"],
+      "resistances": [{ "type": "Poison", "value": 20 }],
+      "weaknesses": [],
+      "speed": { "walk": 20, "burrow": 20, "swim": 20 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": ["Deadly 3d10", "Reach 15 ft."], "attack": 27, "damage": "3d10+13", "damageType": "piercing", "note": "see Swallow Whole" },
+        { "name": "Stinger", "cost": 1, "type": "Strike", "traits": ["Deadly 3d6", "Reach 15 ft.", "Poison"], "attack": 27, "damage": "2d10+13", "damageType": "piercing", "note": "plus purple worm venom" },
+        { "name": "Thrash", "cost": 2, "type": "Ability", "description": "The purple worm makes two Strikes (one Jaws, one Stinger), each against a different target. This counts as two attacks for MAP." }
+      ],
+      "abilities": [
+        { "name": "Fast Swallow", "description": "When the purple worm Swallows a creature, it can use Swallow Whole as a free action." },
+        { "name": "Swallow Whole", "cost": 1, "description": "Huge or smaller, 3d10+13 bludgeoning, Rupture 26. A swallowed creature takes the listed damage at the start of the worm's turns." },
+        { "name": "Purple Worm Venom", "description": "Saves DC 32 Fortitude. Stages: Enfeebled 2 and Slowed 1 (1 round); Enfeebled 3 and Slowed 2 (1 round); Paralyzed (1 round)." }
+      ]
+    },
+    {
+      "name": "Ancient Red Dragon",
+      "level": 19,
+      "rarity": "Rare",
+      "size": "Gargantuan",
+      "traits": ["Dragon", "Fire"],
+      "source": "Bestiary",
+      "perception": 34,
+      "senses": ["darkvision", "scent 60 ft.", "tremorsense 60 ft."],
+      "languages": ["Common", "Draconic", "Dwarven", "Orcish", "Jotun", "Infernal"],
+      "skills": { "Acrobatics": 30, "Athletics": 37, "Deception": 35, "Diplomacy": 33, "Intimidation": 37, "Stealth": 30 },
+      "str": 9, "dex": 5, "con": 8, "int": 5, "wis": 6, "cha": 9,
+      "items": [],
+      "ac": 43,
+      "saves": { "fort": 35, "ref": 32, "will": 33 },
+      "hp": 425,
+      "immunities": ["fire", "paralysis", "sleep"],
+      "resistances": [],
+      "weaknesses": [{ "type": "Cold", "value": 20 }],
+      "speed": { "walk": 60, "fly": 120, "burrow": 10 },
+      "actions": [
+        { "name": "Jaws", "cost": 1, "type": "Strike", "traits": ["Fire", "Reach 15 ft."], "attack": 37, "damage": "3d12+17 piercing + 3d6", "damageType": "fire" },
+        { "name": "Claw", "cost": 1, "type": "Strike", "traits": ["Agile", "Reach 10 ft."], "attack": 37, "damage": "3d8+17", "damageType": "slashing" },
+        { "name": "Tail", "cost": 1, "type": "Strike", "traits": ["Reach 25 ft."], "attack": 35, "damage": "3d10+17", "damageType": "bludgeoning" },
+        { "name": "Breath Weapon", "cost": 2, "type": "Ability", "description": "DC 41 Reflex save, 100 ft. cone of fire. Full damage on fail (15d6), half on success, usable again in 1d4 rounds." },
+        { "name": "Wing Attack", "cost": 1, "type": "Ability", "description": "The dragon deals 4d8+17 bludgeoning to all creatures in a 15 ft. emanation (DC 39 Reflex)." }
+      ],
+      "abilities": [
+        { "name": "Frightful Presence", "description": "Aura 90 ft., DC 39 Will. Creatures that fail are Frightened 2 (Frightened 4 on a critical fail). Creatures that succeed are immune for 24 hours." },
+        { "name": "Draconic Momentum", "description": "The dragon recharges its Breath Weapon whenever it scores a critical hit with a Strike." },
+        { "name": "Innate Arcane Spells", "description": "DC 41: At will — detect magic, locate; 3/day — true seeing; 1/day — discern location." }
+      ]
+    }
+  ]
+}
